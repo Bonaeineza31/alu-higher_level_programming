@@ -4,4 +4,9 @@ def safe_print_integer(value):
         print("{:d}".format(value))
         return True
     except (ValueError, TypeError):
+<<<<<<< HEAD
         return False
+=======
+        # If there's an error in formatting, return False
+        return False
+>>>>>>> refs/remotes/origin/master
