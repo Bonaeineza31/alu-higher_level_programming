@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """
 This module defines a Square class with size and position, validation for size,
-methods to compute the area of the square, and a method to print the square using the character "#",
-while considering the position.
+methods to search it's area, and  method to print it using the character "#",.
 """
 
 class Square:
