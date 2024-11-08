@@ -1,27 +1,31 @@
 #!/usr/bin/python3
 """
-This module defines a Square class with size and position, validation for size,
-methods to search it's area, and  method to print it using the character "#",.
+This module defines a Square class with a size and position, validation for size,
+methods to compute the area of the square, and a method to print the square using 
+the character "#", while considering the position.
 """
 
 
 class Square:
     """
-    Represents a square with size,position and method to print the square.
+    Represents a square with size,position and methods to print the square.
+    
     Attributes:
-        __size (int):size of a side of the square. Must be an integer and >= 0.
-        __position (tuple):2 positive integers representing the position.
+        __size (int): The size of a side of the square. Must be an integer and >= 0.
+        __position (tuple): A tuple of 2 positive integers representing the position.
     """
 
     def __init__(self, size=0, position=(0, 0)):
         """
         Initializes a new Square instance with a given size and position.
+        
         Args:
-            size (int, optional): The size of the square. Defaults to 0.
-            position (tuple,): it's position is given by a tuple of two int.
+            size (int): The size of the square. Defaults to 0.
+            position (tuple): The position of the square, represented by a tuple of 2 int.
+        
         Raises:
-            TypeError: If size isn't int/position then it's tuple of 2 + int.
-            ValueError: If size is less than 0 or position integers are not +.
+            TypeError: If size is not an integer or position is not a tuple of 2 + int.
+            ValueError: If size is less than 0 or position integers are not positive.
         """
         self.size = size
         self.position = position
@@ -30,6 +34,7 @@ class Square:
     def size(self):
         """
         Retrieves the size of the square.
+        
         Returns:
             int: The size of the square.
         """
@@ -39,8 +44,10 @@ class Square:
     def size(self, value):
         """
         Sets the size of the square with validation.
+        
         Args:
             value (int): The new size of the square.
+        
         Raises:
             TypeError: If the value is not an integer.
             ValueError: If the value is less than 0.
@@ -65,15 +72,17 @@ class Square:
         """
         Sets the position of the square with validation.
         Args:
-            value (tuple): Should be a tuple of two positive integers.
+            value (tuple): The new position, which should be a tuple of 2 + int.
         Raises:
-            TypeError: If the value is not a tuple of two + integers.
+            TypeError: If the value is not a tuple of two positive integers.
             ValueError: If the values are not positive integers.
         """
         if not isinstance(value, tuple) or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        if not (isinstance(i, int) for i in value) or not (i >= 0 for i in value):
+        
+        if not all(isinstance(i, int) and i >= 0 for i in value):
             raise TypeError("position must be a tuple of 2 positive integers")
+        
         self.__position = value
 
     def area(self):
@@ -97,4 +106,4 @@ class Square:
                 print()
             # Print the square with horizontal offset (position[0] spaces)
             for _ in range(self.__size):
-             print(" " * self.__position[0] + "#" * self.__size)
+                print(" " * self.__position[0] + "#" * self.__size)
