@@ -4,12 +4,13 @@ This module defines a Square class with size and position, validation for size,
 methods to search it's area, and  method to print it using the character "#",.
 """
 
+
 class Square:
     """
-    Represents a square with a validated size, position, and methods to print the square.
+    Represents a square with valid size, position, and methods to print the square.
     Attributes:
-        __size (int): The size of a side of the square. Must be an integer and >= 0.
-        __position (tuple): A tuple of 2 positive integers representing the position.
+        __size (int):size of a side of the square. Must be an integer and >= 0.
+        __position (tuple):2 positive integers representing the position.
     """
 
     def __init__(self, size=0, position=(0, 0)):
@@ -17,9 +18,9 @@ class Square:
         Initializes a new Square instance with a given size and position.
         Args:
             size (int, optional): The size of the square. Defaults to 0.
-            position (tuple, optional): The position of the square, represented by a tuple of two integers.
+            position (tuple, optional): it's position is represented by a tuple of two integers.
         Raises:
-            TypeError: If size is not an integer or position is not a tuple of two positive integers.
+            TypeError: If size is not integer/position is not a tuple of 2 positive integers.
             ValueError: If size is less than 0 or position integers are not positive.
         """
         self.size = size
@@ -64,7 +65,7 @@ class Square:
         """
         Sets the position of the square with validation.
         Args:
-            value (tuple): The new position, which should be a tuple of two positive integers.
+            value (tuple): Should be a tuple of two positive integers.
         Raises:
             TypeError: If the value is not a tuple of two positive integers.
             ValueError: If the values are not positive integers.
