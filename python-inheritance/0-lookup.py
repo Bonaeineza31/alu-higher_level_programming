@@ -7,7 +7,7 @@ attributes and methods of an object using the built-in `dir()` function.
 
 def lookup(obj):
     """
-    Returns a list of available attrib and methods of an obj. 
+    Returns a list of available attrib and methods of an obj.
     Args:
         obj:obj whose attributes and methods are to be retrieved.
     Returns:
