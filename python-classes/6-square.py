@@ -19,7 +19,7 @@ class Square:
         Initializes a new Square instance with a given size and position.
         Args:
             size (int): The size of the square. Defaults to 0.
-            position (tuple):position of the square, given by a tuple of 2 int.     
+        position (tuple):position of the square, given by a tuple of 2 int.     
         Raises:
             TypeError: If size isn't int/position is not a tuple of 2 + int.
             ValueError: If size is  < 0 or position integers are not +.
@@ -98,4 +98,4 @@ class Square:
                 print()
             # Print the square with horizontal offset (position[0] spaces)
             for _ in range(self.__size):
-                print(" " * self.__position[0] + "#" * self.__size)
+             print(" " * self.__position[0] + "#" * self.__size)
