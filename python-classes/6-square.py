@@ -7,7 +7,7 @@ methods to search it's area, and  method to print it using the character "#",.
 
 class Square:
     """
-    Represents a square with valid size, position, and methods to print the square.
+    Represents a square with valid size,position and methods to print the square.
     Attributes:
         __size (int):size of a side of the square. Must be an integer and >= 0.
         __position (tuple):2 positive integers representing the position.
@@ -18,10 +18,10 @@ class Square:
         Initializes a new Square instance with a given size and position.
         Args:
             size (int, optional): The size of the square. Defaults to 0.
-            position (tuple, optional): it's position is represented by a tuple of two integers.
+            position (tuple,): it's position is given by a tuple of two integers.
         Raises:
-            TypeError: If size is not integer/position is not a tuple of 2 positive integers.
-            ValueError: If size is less than 0 or position integers are not positive.
+            TypeError: If size isn't integer/position then it's tuple of 2 + integers.
+            ValueError: If size is less than 0 or position integers are not +.
         """
         self.size = size
         self.position = position
@@ -67,7 +67,7 @@ class Square:
         Args:
             value (tuple): Should be a tuple of two positive integers.
         Raises:
-            TypeError: If the value is not a tuple of two positive integers.
+            TypeError: If the value is not a tuple of two + integers.
             ValueError: If the values are not positive integers.
         """
         if not isinstance(value, tuple) or len(value) != 2:
@@ -97,4 +97,4 @@ class Square:
                 print()
             # Print the square with horizontal offset (position[0] spaces)
             for _ in range(self.__size):
-                print(" " * self.__position[0] + "#" * self.__size)
+             print(" " * self.__position[0] + "#" * self.__size)
