@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-This module defines a Square class with a private instance attribute `size`,
-includes validation for `size`, and has a method to compute the area of the square.
+This module defines a Square class with a prvat instance attribute `size`,
+includes validation for `size`, and has a method to compute it's area.
 """
 
 
@@ -57,7 +57,7 @@ class Square:
     def area(self):
         """
         Calculates the area of the square.
-        
+
         Returns:
             int: The area of the square (size * size).
         """
