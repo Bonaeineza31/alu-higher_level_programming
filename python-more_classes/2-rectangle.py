@@ -4,6 +4,7 @@ This module defines a class  Rectangle with width and height.
 The class provides methods to check the area and perimeter of the rectangle.
 """
 
+
 class Rectangle:
     """
     Defines a rect by its width and height,methods for area and perimeter.
