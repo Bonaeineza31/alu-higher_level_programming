@@ -26,8 +26,7 @@ class Rectangle:
         perimeter(): Returns the perimeter of the rectangle.
         __str__(): Returns a string representation of the rectangle.
         __repr__(): Returns an eval-compatible string representation.
-    """
-    
+    """  
     number_of_instances = 0
     print_symbol = "#"
 
