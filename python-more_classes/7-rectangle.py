@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-This module defines a class  Rectangle with validated width and height.
-The class provides methods for checking area, perimeter,
-representation, and an eval-compatible representation
+This module defines a class Rectangle with width and height.
+The class provides methods for calculating area, perimeter,
+representation, an eval-compatible representation.
 """
 
 
@@ -10,12 +10,14 @@ class Rectangle:
     """
     Defines a rectangle by its width and height, with methods for area,
     perimeter, a visual string representation, and an eval-compatible
-    representation. Tracks the number of instances.
+    representation. Tracks the number of instances and allows custom
+    print symbols.
 
     Attributes:
         width (int): The width of the rectangle, must be >= 0.
         height (int): The height of the rectangle, must be >= 0.
         number_of_instances (int): Tracks the number of Rectangle instances.
+        print_symbol (any): Symbol used for the visual representation.
 
     Methods:
         width (int): Gets or sets the width of the rectangle.
@@ -25,16 +27,19 @@ class Rectangle:
         __str__(): Returns a string representation of the rectangle.
         __repr__(): Returns an eval-compatible string representation.
     """
-
+    
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """
         Initializes the rectangle with an optional width and height.
         Increments the number_of_instances class attribute.
+
         Args:
             width (int, optional): The width of the rectangle. Defaults to 0.
             height (int, optional): The height of the rectangle. Defaults to 0.
+
         Raises:
             TypeError: If width or height is not an integer.
             ValueError: If width or height is less than 0.
@@ -83,18 +88,20 @@ class Rectangle:
 
     def __str__(self):
         """
-        Returns a string representation of the rectangle using the `#`
-        character.
-        
+        Returns a string representation of the rectangle using the
+        `print_symbol` character.
+
         If width or height is 0, returns an empty string.
         """
         if self.__width == 0 or self.__height == 0:
             return ""
-        return "\n".join("#" * self.__width for _ in range(self.__height))
+        symbol = str(self.print_symbol)
+        return "\n".join(symbol * self.__width for _ in range(self.__height))
 
     def __repr__(self):
         """
         Returns an eval-compatible string representation of the rectangle.
+
         This representation allows for the creation of a new instance
         using eval().
         """
