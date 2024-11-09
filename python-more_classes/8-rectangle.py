@@ -24,7 +24,6 @@ class Rectangle:
         perimeter(): Returns the perimeter of the rectangle.
         bigger_or_equal(rect_1, rect_2): Returns the rect with large area
     """
-    
     number_of_instances = 0
     print_symbol = "#"
 
@@ -120,7 +119,7 @@ class Rectangle:
             rect_2 (Rectangle): Second rectangle instance.
 
         Raises:
-            TypeError: If either rect_1 or rect_2 is not an instance of Rectangle.
+            TypeError: If either rect_1 or rect_2 isn't instance of Rectangle.
 
         Returns:
             Rectangle: The rectangle with the greater or equal area.
