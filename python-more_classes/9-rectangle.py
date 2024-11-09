@@ -22,9 +22,8 @@ class Rectangle:
         area(): Returns the area of the rectangle.
         perimeter(): Returns the perimeter of the rectangle.
         bigger_or_equal(rect_1, rect_2):Returns the rect with the larger area.
-        square(cls, size=0):Returns a new Rect instance with width==height==size.
+        square(cls, size=0):Returns a new Rect inst with width==height==size.
     """
-    
     number_of_instances = 0
     print_symbol = "#"
 
@@ -123,7 +122,7 @@ class Rectangle:
             rect_2 (Rectangle): Second rectangle instance.
 
         Raises:
-            TypeError: If either rect_1 or rect_2 is not an instance of Rectangle.
+            TypeError: If either rect_1 or rect_2 is not an instance of Rect.
 
         Returns:
             Rectangle: The rectangle with the greater or equal area.
@@ -132,7 +131,6 @@ class Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
-        
         if rect_1.area() >= rect_2.area():
             return rect_1
         else:
@@ -144,9 +142,9 @@ class Rectangle:
         Creates a new Rectangle instance with width and height equal to size.
 
         Args:
-            size (int, optional): The size of the square's sides. Defaults to 0.
+            size (int, ): The size of the square's sides. Defaults to 0.
 
         Returns:
-            Rectangle: A new instance of Rectangle with width == height == size.
+            Rectangle: A new instance of Rectangle with width==height==size.
         """
         return cls(size, size)
