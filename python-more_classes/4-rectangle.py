@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """
-This module defines a class called Rectangle with validated width and height.
-The class provides methods for calculating area, perimeter, a visual string
+The module defines a class  Rectangle with width and height.
+The class provides methods for checking area, perimeter
 representation, and an eval-compatible representation.
 """
-i
+
 
 class Rectangle:
     """
