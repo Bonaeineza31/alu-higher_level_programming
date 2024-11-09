@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module defines function `is_same_class` that checks if object is 
+This module defines function `is_same_class` that checks if object is
 an instance of a specified class.
 """
 
