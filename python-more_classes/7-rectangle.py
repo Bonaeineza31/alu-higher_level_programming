@@ -25,7 +25,7 @@ class Rectangle:
         __str__(): Returns a string representation of the rectangle.
         __repr__(): Returns an eval-compatible string representation.
     """
-    
+
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
