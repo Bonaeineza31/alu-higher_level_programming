@@ -5,6 +5,7 @@ The class provides methods for check area, perimeter,
 representation, and an eval-compatible representation.
 """
 
+
 class Rectangle:
     """
     Defines a rectangle by its width and height, with methods for area,
