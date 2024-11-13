@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+i#!/usr/bin/python3
 """
 This module provides a function to write a string to a text file
 and return the number of characters written.
