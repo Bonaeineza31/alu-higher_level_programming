@@ -4,7 +4,6 @@ This module defines the pascal_triangle function that generates
 Pascal's Triangle of a given size.
 """
 
-
 def pascal_triangle(n):
     """
     Generates Pascal's Triangle up to n rows.
@@ -12,7 +11,7 @@ def pascal_triangle(n):
         n (int): The number of rows of Pascal's Triangle to generate.
 
     Returns:
-        list of lists: A list of  where each sublist rep a row in Triangle.
+        list of lists: A list of lists where ea in Pascal's Triangle.
     """
     if n <= 0:
         return []
@@ -24,4 +23,5 @@ def pascal_triangle(n):
             row.append(triangle[i-1][j-1] + triangle[i-1][j])
         row.append(1)
         triangle.append(row)
-        return triangle
+
+    return triangle
