@@ -12,7 +12,7 @@ def pascal_triangle(n):
         n (int): The number of rows of Pascal's Triangle to generate.
 
     Returns:
-        list of lists: A list of l where each sublist represents a row in Pascal's Triangle.
+        list of lists: A list of  where each sublist rep a row in Triangle.
     """
     if n <= 0:
         return []
@@ -24,5 +24,4 @@ def pascal_triangle(n):
             row.append(triangle[i-1][j-1] + triangle[i-1][j])
         row.append(1)
         triangle.append(row)
-    
-    return triangle
+        return triangle

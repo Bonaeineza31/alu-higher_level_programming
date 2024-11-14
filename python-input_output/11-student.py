@@ -32,7 +32,7 @@ class Student:
         Args:
             attrs (list): A list of attribute names to retrieve.
         Returns:
-            dict: A dictionary of the instance's attributes (filtered if attrs is provided).
+            dict: A dictionary of the (filtered if attrs is provided).
         """
         if isinstance(attrs, list) and all(isinstance(attr, str) for attr in attrs):
             return {attr: getattr(self, attr) for attr in attrs if hasattr(self, attr)}
