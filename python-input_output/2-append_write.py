@@ -4,6 +4,7 @@ This module provides a function to append a string to a text file
 and return the number of characters added.
 """
 
+
 '''my function is documented '''
 def append_write(filename="", text=""):
     """Appends a string text file and returns nbr of characters added."""
