@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """
-This module provides a function to save a Python object to a file in JSON format.
+This module provides function to save Python object to file in JSON format.
 """
 
 import json
+
 
 def save_to_json_file(my_obj, filename):
     """
