@@ -7,6 +7,6 @@ and return the number of characters added.
 
 '''my function is documented '''
 def append_write(filename="", text=""):
-    """Appends a string text file and returns nbr of characters added."""
+    """Appends a string text file returns nbr of characters added."""
     with open(filename, "a", encoding="utf-8") as file:
         return file.write(text)
