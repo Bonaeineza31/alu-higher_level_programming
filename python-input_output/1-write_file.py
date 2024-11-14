@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
 This module provides a function to write a string to a text file
+wa4esrtyugiijopjihyvt7rxe5z45xr6tgy8uh9ijhugyft
 and return the number of characters writyioidfghjjkldtuolkhrhjkluen.
 """
 
