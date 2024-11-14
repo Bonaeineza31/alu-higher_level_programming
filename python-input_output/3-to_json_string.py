@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module provides a way to convert object to its JSON string representation.
+This module provides a way to convert object to its JSON representation.
 """
 
 
