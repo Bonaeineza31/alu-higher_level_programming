@@ -4,6 +4,7 @@ This module defines the pascal_triangle function that generates
 Pascal's Triangle of a given size.
 """
 
+
 def pascal_triangle(n):
     """
     Generates Pascal's Triangle up to n rows.
