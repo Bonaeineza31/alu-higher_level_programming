@@ -9,11 +9,8 @@ import urllib.request
 if __name__ == "__main__":
     url = "https://alu-intranet.hbtn.io/status"
 
-    # Using a with statement to manage the request
     with urllib.request.urlopen(url) as response:
         body = response.read()
-
-        # Displaying the required information
         print("Body response:")
         print("\t- type:", type(body))
         print("\t- content:", body)
