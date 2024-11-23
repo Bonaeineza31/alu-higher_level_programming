@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Write a Python script that takes in a URL and sends a request 
+Write a Python script that takes in a URL and sends a request
 to the URL and displays variable X-Request-Id in the response header
 """
 import sys
