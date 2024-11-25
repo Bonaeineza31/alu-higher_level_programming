@@ -1,0 +1,25 @@
+Text indentation function
+==========================
+
+>>> text_indentation("Hello. How are you? I am fine:")
+Hello.
+<BLANKLINE>
+How are you?
+<BLANKLINE>
+I am fine:
+<BLANKLINE>
+
+>>> text_indentation("This is a test. This is only a test?")
+This is a test.
+<BLANKLINE>
+This is only a test?
+<BLANKLINE>
+
+>>> text_indentation("No indentation needed here")
+No indentation needed here
+<BLANKLINE>
+
+>>> text_indentation(123)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
