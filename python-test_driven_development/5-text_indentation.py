@@ -5,34 +5,22 @@ Module for adding text indentation after specific characters.
 
 
 def text_indentation(text):
-    """
-    Prints a text with 2 new lines after each of these characters: ., ? and :
-
+    """Prints text with two new lines after `.`, `:`, and `?`.
+    
     Args:
-        text (str): The input text.
-
+        text (str): The text to format.
+    
     Raises:
-        TypeError: If text is not a string.
+        TypeError: If `text` is not a string.
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-
-    # Characters that trigger double newlines
-    delimiters = {".", "?", ":"}
+    
     result = ""
-    i = 0
-
-    while i < len(text):
-        char = text[i]
+    for char in text:
         result += char
-        if char in delimiters:
+        if char in ".:?":
             result += "\n\n"
-            # Skip any spaces following the delimiter
-            i += 1
-            while i < len(text) and text[i] == " ":
-                i += 1
-            continue
-        i += 1
-
-    # Print the formatted text without trailing spaces
-    print(result.strip())
+    # Remove leading/trailing spaces from each line
+    result = "\n".join([line.strip() for line in result.split("\n")])
+    print(result)

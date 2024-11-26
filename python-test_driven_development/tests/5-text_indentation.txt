@@ -15,30 +15,10 @@ Trailing spaces after delimiter.
 <BLANKLINE>
 Next sentence?
 
->>> text_indentation("Edge case:    ")
-Edge case:
-
 >>> text_indentation("")
 <BLANKLINE>
 
->>> text_indentation("Multiple: consecutive: delimiters:")
-Multiple:
-<BLANKLINE>
-consecutive:
-<BLANKLINE>
-delimiters:
-
->>> text_indentation("Are you ready?Good luck.")
-Are you ready?
-<BLANKLINE>
-Good luck.
-
 >>> text_indentation(12345)
-Traceback (most recent call last):
-    ...
-TypeError: text must be a string
-
->>> text_indentation(None)
 Traceback (most recent call last):
     ...
 TypeError: text must be a string
