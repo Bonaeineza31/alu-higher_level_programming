@@ -1,4 +1,3 @@
->>> text_indentation = __import__('5-text_indentation').text_indentation
 >>> text_indentation("Hello world. This is Python: Are you excited? Let's start!")
 Hello world.
 <BLANKLINE>
@@ -8,9 +7,6 @@ Are you excited?
 <BLANKLINE>
 Let's start!
 
->>> text_indentation("Simple text without special delimiters")
-Simple text without special delimiters
-
 >>> text_indentation("Trailing spaces after delimiter.    Next sentence?")
 Trailing spaces after delimiter.
 <BLANKLINE>
@@ -19,7 +15,10 @@ Next sentence?
 >>> text_indentation("")
 <BLANKLINE>
 
->>> text_indentation(12345)
+>>> text_indentation("Simple text without special delimiters")
+Simple text without special delimiters
+
+>>> text_indentation(12)
 Traceback (most recent call last):
     ...
 TypeError: text must be a string
