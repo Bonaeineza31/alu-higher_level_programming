@@ -6,21 +6,29 @@ Module for adding text indentation after specific characters.
 
 def text_indentation(text):
     """Prints text with two new lines after `.`, `:`, and `?`.
-    
+
     Args:
         text (str): The text to format.
-    
+
     Raises:
         TypeError: If `text` is not a string.
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     
+    # Initialize result string
     result = ""
+    # Flag to manage leading spaces
+    skip_space = True
+    
     for char in text:
-        result += char
         if char in ".:?":
-            result += "\n\n"
-    # Remove leading/trailing spaces from each line
-    result = "\n".join([line.strip() for line in result.split("\n")])
-    print(result)
+            result += char + "\n\n"
+            skip_space = True
+        elif char == " " and skip_space:
+            continue
+        else:
+            result += char
+            skip_space = False
+
+    print(result.strip())
