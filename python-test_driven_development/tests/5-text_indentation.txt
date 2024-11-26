@@ -1,25 +1,44 @@
-Text indentation function
-==========================
->>> text_indentation = __import__('5-text_indentation').text_indentation
->>> text_indentation("Hello. How are you? I am fine:")
-Hello.
+>>> text_indentation("Hello world. This is Python: Are you excited? Let's start!")
+Hello world.
 <BLANKLINE>
-How are you?
+This is Python:
 <BLANKLINE>
-I am fine:
+Are you excited?
+<BLANKLINE>
+Let's start!
+
+>>> text_indentation("Simple text without special delimiters")
+Simple text without special delimiters
+
+>>> text_indentation("Trailing spaces after delimiter.    Next sentence?")
+Trailing spaces after delimiter.
+<BLANKLINE>
+Next sentence?
+
+>>> text_indentation("Edge case:    ")
+Edge case:
+
+>>> text_indentation("")
 <BLANKLINE>
 
->>> text_indentation("This is a test. This is only a test?")
-This is a test.
+>>> text_indentation("Multiple: consecutive: delimiters:")
+Multiple:
 <BLANKLINE>
-This is only a test?
+consecutive:
 <BLANKLINE>
+delimiters:
 
->>> text_indentation("No indentation needed here")
-No indentation needed here
+>>> text_indentation("Are you ready?Good luck.")
+Are you ready?
 <BLANKLINE>
+Good luck.
 
->>> text_indentation(123)
+>>> text_indentation(12345)
 Traceback (most recent call last):
-...
+    ...
+TypeError: text must be a string
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+    ...
 TypeError: text must be a string

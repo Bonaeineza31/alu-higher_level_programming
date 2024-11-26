@@ -1,40 +1,38 @@
 #!/usr/bin/python3
 """
-This module provides fx to format text with indentation.
+Module for adding text indentation after specific characters.
 """
 
 
 def text_indentation(text):
     """
-    Prints a text with 2 new lines after each '.'.
+    Prints a text with 2 new lines after each of these characters: ., ? and :
 
     Args:
-        text (str): The input text to be formatted.
+        text (str): The input text.
 
     Raises:
         TypeError: If text is not a string.
-
-    Examples:
-        >>> text_indentation("Hello. How are you? I am fine:")
-        Hello.
-        <BLANKLINE>
-        How are you?
-        <BLANKLINE>
-        I am fine:
-        <BLANKLINE>
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    chars = ['.', '?', ':']
+    # Characters that trigger double newlines
+    delimiters = {".", "?", ":"}
     result = ""
-    temp = text
+    i = 0
 
-    for char in chars:
-        temp = temp.replace(char, f"{char}\n\n")
+    while i < len(text):
+        char = text[i]
+        result += char
+        if char in delimiters:
+            result += "\n\n"
+            # Skip any spaces following the delimiter
+            i += 1
+            while i < len(text) and text[i] == " ":
+                i += 1
+            continue
+        i += 1
 
-    lines = temp.splitlines()
-    for line in lines:
-        result += line.strip() + "\n"
-
-    print(result, end="")
+    # Print the formatted text without trailing spaces
+    print(result.strip())
