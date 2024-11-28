@@ -15,7 +15,7 @@ class Base:
         """
         Initialize a new Base instance.
         Args:
-            id (int): The ID of the object. 
+            id (int): The ID of the object.
         """
         if id is not None:
             self.id = id
@@ -40,8 +40,8 @@ class Base:
     def from_json_string(json_string):
         """
         Convert a JSON string back to a list of dictionaries.
-        Args:
-            json_string (str): A JSON string 
+         Args:
+            json_string (str): A JSON string
         Returns:
             list: The corresponding list of dictionaries.
         """
