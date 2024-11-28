@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-1-filter_states.py
-Lists all states with a name starting with 'N' from the database hbtn_0e_0_usa.
+2-my_filter_states.py
+Displays all values in the `states` table of `hbtn_0e_0_usa`
+where `name` matches the argument provided by the user.
 """
 
 import MySQLdb
@@ -12,6 +13,7 @@ if __name__ == "__main__":
     mysql_username = sys.argv[1]
     mysql_password = sys.argv[2]
     database_name = sys.argv[3]
+    state_name = sys.argv[4]
 
     # Connect to the MySQL database
     db = MySQLdb.connect(
@@ -25,8 +27,9 @@ if __name__ == "__main__":
     # Create a cursor object to interact with the database
     cur = db.cursor()
 
-    # Execute the SQL query with a BINARY condition for case sensitivity
-    cur.execute("SELECT * FROM states WHERE BINARY name LIKE 'N%' ORDER BY id ASC")
+    # Create and execute the SQL query using format() for user input
+    query = "SELECT * FROM states WHERE BINARY name = '{}' ORDER BY id ASC".format(state_name)
+    cur.execute(query)
 
     # Fetch and display the results
     rows = cur.fetchall()
