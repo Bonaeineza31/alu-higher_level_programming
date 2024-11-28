@@ -1,10 +1,5 @@
 #!/usr/bin/python3
 """
-Select all records from states table
-"""
-
-#!/usr/bin/python3
-"""
 Lists all states from the database hbtn_0e_0_usa.
 """
 import MySQLdb
