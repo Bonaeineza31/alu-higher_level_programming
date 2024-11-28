@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 5-filter_cities.py
-Lists all cities from the `cities` table of `hbtn_0e_4_usa` 
+Lists all cities from the `cities` table of `hbtn_0e_4_usa`
 where `state name` matches the argument provided by the user.
 """
 
@@ -35,13 +35,13 @@ if __name__ == "__main__":
     WHERE states.name = %s
     ORDER BY cities.id ASC
     """
-    
+
     # Execute the query with safe parameterized input
     cur.execute(query, (state_name,))
 
     # Fetch and display the results
     rows = cur.fetchall()
-    
+
     if rows:
         print(", ".join([row[0] for row in rows]))
     else:
