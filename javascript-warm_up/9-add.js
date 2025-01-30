@@ -1,5 +1,5 @@
 #!/usr/bin/node
-function add (a, b) {
+function add (a, c) {
     return a + b;
   }
   
