@@ -13,3 +13,4 @@ function getArgs () {
   }
   
   console.log(getSecondLargest(getArgs()));
+  

@@ -4,3 +4,4 @@ if (Number.isNaN(Number(process.argv[2]))) {
   } else {
     console.log(`My number: ${Number(process.argv[2]).toFixed(0)}`);
   }
+  

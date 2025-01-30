@@ -9,3 +9,4 @@ function factorial (n) {
   
   const num = Number.isNaN(Number(process.argv[2])) ? 0 : Number(process.argv[2]);
   console.log(factorial(num));
+  

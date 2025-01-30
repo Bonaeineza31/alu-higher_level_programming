@@ -6,3 +6,4 @@ if (process.argv.length - 2 === 0) {
   } else {
     console.log('Arguments found');
   }
+  
